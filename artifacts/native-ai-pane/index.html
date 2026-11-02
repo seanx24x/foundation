@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; frame-src 'self'; connect-src 'self'; img-src 'self' data:; form-action 'none'; base-uri 'none'">
+    <title>Foundation · Native AI pane</title>
+    <link rel="stylesheet" href="./harness.css">
+    <script defer src="./harness.js"></script>
+  </head>
+  <body>
+    <header class="fixture-header">
+      <div class="fixture-brand"><span class="fixture-mark" aria-hidden="true">F</span><div><strong>Foundation</strong><span>Native AI pane</span></div></div>
+      <p class="fixture-boundary"><span aria-hidden="true"></span>Native UI · fixture host · no provider/source writes</p>
+      <div class="fixture-settings">
+        <label>Theme<select id="fixture-theme"><option value="dark">Dark</option><option value="light">Light</option></select></label>
+        <label>Viewport<select id="fixture-width"><option value="384">384 px · pane</option><option value="720" selected>720 px · expanded</option><option value="full">Available width</option></select></label>
+      </div>
+    </header>
+    <main class="fixture-layout">
+      <aside class="fixture-sidebar" aria-label="Fixture scenarios">
+        <div class="fixture-intro"><span class="fixture-eyebrow">Production renderer</span><h1>Evidence, in the conversation.</h1><p>The actual desktop webview, connected to a deterministic sample host.</p></div>
+        <div class="fixture-scenarios" role="group" aria-label="Load a sample scenario">
+          <button type="button" data-scenario="explanation"><span>01</span><div><strong>Explanation</strong><small>Saved source and citations</small></div></button>
+          <button type="button" data-scenario="proposal"><span>02</span><div><strong>Proposal</strong><small>One file, ready to review</small></div></button>
+          <button type="button" data-scenario="stale"><span>03</span><div><strong>Stale</strong><small>Changed baseline blocks apply</small></div></button>
+          <button type="button" data-scenario="draft"><span>04</span><div><strong>Draft</strong><small>Unsaved context blocks dispatch</small></div></button>
+          <button type="button" data-scenario="streaming"><span>05</span><div><strong>Streaming / Stop</strong><small>Partial response and cancel ack</small></div></button>
+          <button type="button" data-scenario="failed"><span>06</span><div><strong>Failed</strong><small>Visible error, retained context</small></div></button>
+        </div>
+        <button class="fixture-reset" id="fixture-reset" type="button">Reset sample</button>
+        <p class="fixture-footnote">Choose a scenario to start. Actions inside the pane are simulated in memory. This page has no connection to your editor or provider.</p>
+        <div class="fixture-downloads"><a class="fixture-doc-link" href="./README.md" download>Harness notes ↓</a><a class="fixture-doc-link" href="./media/webview.js" download>Renderer JS ↓</a><a class="fixture-doc-link" href="./media/webview.css" download>Renderer CSS ↓</a><a class="fixture-doc-link" href="./media/artifact-model.js" download>Artifact model ↓</a></div>
+      </aside>
+      <section class="fixture-workspace" aria-label="Native UI preview">
+        <div class="fixture-stage-heading"><div><span class="fixture-eyebrow" id="fixture-scenario-label">Ready to explore</span><p id="fixture-scenario-copy">The sample starts idle. Choose a scenario or ask a question in the pane.</p></div><span class="fixture-renderer-label">webview.js + webview.css</span></div>
+        <div class="fixture-stage"><iframe id="native-webview" title="Foundation native webview · simulated host" class="width-720"></iframe></div>
+        <section class="fixture-log" aria-label="Fixture host activity"><div><span class="fixture-eyebrow">Last host action</span><span id="fixture-request-id">No active request</span></div><p id="fixture-last-action" role="status" aria-live="polite">Loading local renderer assets…</p><details><summary>Message details</summary><pre id="fixture-message">No message yet.</pre></details></section>
+      </section>
+    </main>
+    <dialog id="fixture-detail" aria-labelledby="fixture-detail-title"><header><div><span class="fixture-eyebrow">Read-only fixture detail</span><h2 id="fixture-detail-title">Source snapshot</h2></div><button id="fixture-detail-close" type="button" aria-label="Close source snapshot">Close</button></header><p id="fixture-detail-description"></p><div id="fixture-detail-body"></div></dialog>
+  </body>
+</html>

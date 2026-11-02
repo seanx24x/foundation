@@ -1,0 +1,40 @@
+node_modules/
+dist/
+.foundation/
+test-results/
+playwright-report/
+artifacts/*.png
+artifacts/test-results/
+artifacts/playwright-report/
+.DS_Store
+
+# Reproducible Code OSS desktop build artifacts
+desktop/.upstream/
+desktop/.toolchain/
+desktop/.build/
+desktop/.test-user-data/
+desktop/extension/dist/
+desktop/tests/artifacts/
+desktop/extension/media/preview-runtime.js
+
+# Machine-local configuration, credentials, and generated results
+.env
+.env.*
+!.env.example
+!.env.sample
+*.log
+*.tsbuildinfo
+coverage/
+*.p12
+*.pfx
+*.mobileprovision
+
+# Retain readable evidence summaries and the three interactive reference sources.
+# Raw captures, user-profile snapshots, logs, and benchmark archives stay local.
+/artifacts/*
+!/artifacts/*.md
+!/artifacts/design-system-v1/
+!/artifacts/native-ai-pane/
+!/artifacts/native-workspace/
+/artifacts/native-ai-pane/verification.json
+/artifacts/native-workspace/verification.json

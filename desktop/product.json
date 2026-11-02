@@ -1,0 +1,30 @@
+{
+  "nameShort": "Foundation",
+  "nameLong": "Foundation",
+  "applicationName": "foundation",
+  "dataFolderName": ".foundation-ide",
+  "sharedDataFolderName": ".foundation-ide-shared",
+  "serverApplicationName": "foundation-server",
+  "serverDataFolderName": ".foundation-server",
+  "tunnelApplicationName": "foundation-tunnel",
+  "darwinBundleIdentifier": "design.foundation.ide",
+  "darwinProfileUUID": "E148D285-4252-4620-8B87-8D786EA10CE6",
+  "darwinProfilePayloadUUID": "F22D6D52-04A4-4DAA-96D2-CCF608ED41A3",
+  "urlProtocol": "foundation",
+  "quality": "stable",
+  "licenseName": "Foundation source terms and third-party licenses",
+  "licenseUrl": "https://github.com/seanx24x/foundation/blob/main/LICENSE.txt",
+  "enableTelemetry": false,
+  "builtInExtensionsEnabledWithAutoUpdates": [],
+  "trustedExtensionAuthAccess": {},
+  "extensionsGallery": {
+    "serviceUrl": "https://open-vsx.org/vscode/gallery",
+    "itemUrl": "https://open-vsx.org/vscode/item",
+    "resourceUrlTemplate": "https://open-vsx.org/vscode/unpkg/{publisher}/{name}/{version}/{path}",
+    "extensionUrlTemplate": "https://open-vsx.org/vscode/gallery/{publisher}/{name}/latest"
+  },
+  "onboardingThemes": [
+    { "id": "foundation-dark", "label": "Foundation Dark", "themeId": "Foundation Dark", "type": "dark" },
+    { "id": "foundation-light", "label": "Foundation Light", "themeId": "Foundation Light", "type": "light" }
+  ]
+}

@@ -1,0 +1,20 @@
+import type {ExecutionStatus,ExecutionTask,createExecutionSession} from './execution-session.mjs';
+export type CheckPlanRecommendation = {conversationId:string;requestId:string;artifactId:string;artifactDigest:string};
+export type CheckPlanAttempt = {id:string;executionId?:string;status:ExecutionStatus;reason?:string;createdAt:string;finishedAt?:string};
+export type CheckPlanStep = {id:string;task:ExecutionTask;status:'pending'|'passed'|'skipped';attempts:CheckPlanAttempt[]};
+export type CheckPlan = {recommendation?:CheckPlanRecommendation;id:string;projectId:string;groupId:string;groupRevision:number;groupDigest:string;snapshotRevision:string;revision:number;status:'paused'|'running'|'completed'|'ended';steps:CheckPlanStep[];activeAttemptId?:string;createdAt:string;updatedAt:string};
+export type CheckPlanSnapshot = {current:CheckPlan|null;history:CheckPlan[];busy:boolean;storage:{status:'saved'|'saving'|'error'|'unavailable';message?:string};error?:string;assessment:{canCreate:boolean;canRunNext:boolean;canRetryStep:boolean;canSkipStep:boolean;canStop:boolean;canEnd:boolean;nextStepId?:string;retryStepId?:string;reason?:string}};
+export type CheckPlanGuard = {guard?:()=>Promise<void>};
+export type CheckPlanRunOptions = CheckPlanGuard & {group:unknown;beforeRun?:()=>void};
+export function createCheckPlanSession(options:{storageRoot:string;projectId:string;execution:ReturnType<typeof createExecutionSession>;isCurrent?:()=>boolean;onChange?:(snapshot:CheckPlanSnapshot)=>void}):{
+ snapshot():CheckPlanSnapshot;
+ load():Promise<CheckPlanSnapshot>;
+ create(input:{executionId:string;expectedExecutionRevision:number;taskIds:ExecutionTask['id'][];recommendation?:CheckPlanRecommendation},options?:CheckPlanGuard):Promise<CheckPlanSnapshot>;
+ runNext(id:string,expectedRevision:number,options:CheckPlanRunOptions):Promise<CheckPlanSnapshot>;
+ retryStep(id:string,expectedRevision:number,stepId:string,options:CheckPlanRunOptions):Promise<CheckPlanSnapshot>;
+ skipStep(id:string,expectedRevision:number,stepId:string,options?:CheckPlanGuard):Promise<CheckPlanSnapshot>;
+ end(id:string,expectedRevision:number,options?:CheckPlanGuard):Promise<CheckPlanSnapshot>;
+ stop(id?:string,expectedRevision?:number,attemptId?:string):Promise<CheckPlanSnapshot>;
+ retryStorage():Promise<CheckPlanSnapshot>;
+ dispose():Promise<void>;
+};

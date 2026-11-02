@@ -1,0 +1,480 @@
+{
+  "name": "foundation-workspace",
+  "displayName": "Foundation Workspace",
+  "publisher": "foundation",
+  "version": "0.47.0",
+  "description": "Source understanding, visual refinement, AI conversations, and change review.",
+  "license": "SEE LICENSE IN LICENSE.txt",
+  "engines": {
+    "vscode": "^1.100.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "main": "./dist/extension.cjs",
+  "activationEvents": [
+    "onStartupFinished",
+    "onWebviewPanel:foundation.workspace"
+  ],
+  "capabilities": {
+    "untrustedWorkspaces": {
+      "supported": "limited",
+      "description": "Native editing stays available. Foundation source indexing and AI require workspace trust."
+    },
+    "virtualWorkspaces": {
+      "supported": false
+    }
+  },
+  "contributes": {
+    "commands": [
+      {
+        "command": "foundation.understand",
+        "title": "Understand Source",
+        "category": "Foundation",
+        "icon": "$(type-hierarchy)"
+      },
+      {
+        "command": "foundation.projectSetup",
+        "title": "Project Setup",
+        "category": "Foundation",
+        "icon": "$(tools)"
+      },
+      {
+        "command": "foundation.xcodeProject",
+        "title": "Xcode Project",
+        "category": "Foundation",
+        "icon": "$(beaker)"
+      },
+      {
+        "command": "foundation.knowledge",
+        "title": "Browse Project Knowledge",
+        "category": "Foundation",
+        "icon": "$(book)"
+      },
+      {
+        "command": "foundation.build",
+        "title": "Open in Editor",
+        "category": "Foundation",
+        "icon": "$(code)"
+      },
+      {
+        "command": "foundation.refine",
+        "title": "Refine Interface",
+        "category": "Foundation",
+        "icon": "$(inspect)"
+      },
+      {
+        "command": "foundation.review",
+        "title": "Review Changes",
+        "category": "Foundation",
+        "icon": "$(diff)"
+      },
+      {
+        "command": "foundation.askAI",
+        "title": "Open Assistant",
+        "category": "Foundation",
+        "icon": "$(sparkle)"
+      },
+      {
+        "command": "foundation.toggleAssistant",
+        "title": "Toggle Assistant",
+        "category": "Foundation",
+        "icon": "$(layout-sidebar-right)"
+      },
+      {
+        "command": "foundation.collapseAssistant",
+        "title": "Hide Assistant",
+        "category": "Foundation",
+        "icon": "$(layout-sidebar-right-off)"
+      },
+      {
+        "command": "foundation.openProject",
+        "title": "Open Folder",
+        "category": "Foundation",
+        "icon": "$(folder-opened)"
+      },
+      {
+        "command": "foundation.configureAI",
+        "title": "Set Up AI",
+        "category": "Foundation",
+        "icon": "$(settings-gear)"
+      },
+      {
+        "command": "foundation.clearAIKey",
+        "title": "Remove Saved AI Key",
+        "category": "Foundation"
+      },
+      {
+        "command": "foundation.refresh",
+        "title": "Refresh Source",
+        "category": "Foundation",
+        "icon": "$(refresh)"
+      },
+      {
+        "command": "foundation.openTerminal",
+        "title": "Toggle Terminal",
+        "category": "Foundation",
+        "icon": "$(terminal)"
+      },
+      {
+        "command": "foundation.openSearch",
+        "title": "Search Project",
+        "category": "Foundation",
+        "icon": "$(search)"
+      },
+      {
+        "command": "foundation.openDebug",
+        "title": "Open Run and Debug",
+        "category": "Foundation",
+        "icon": "$(debug-alt)"
+      },
+      {
+        "command": "foundation.openGit",
+        "title": "Open Source Control",
+        "category": "Foundation",
+        "icon": "$(source-control)"
+      },
+      {
+        "command": "foundation.manageTrust",
+        "title": "Manage Workspace Trust",
+        "category": "Foundation",
+        "icon": "$(shield)"
+      },
+      {
+        "command": "foundation.startDesignPreview",
+        "title": "Run Preview",
+        "category": "Foundation",
+        "icon": "$(preview)"
+      },
+      {
+        "command": "foundation.focusWorkspace",
+        "title": "Maximize or Restore Editor Group",
+        "category": "Foundation",
+        "icon": "$(screen-full)"
+      },
+      {
+        "command": "foundation.showDiagnostics",
+        "title": "Show Diagnostics",
+        "category": "Foundation"
+      },
+      {
+        "command": "foundation.newConversation",
+        "title": "New Conversation",
+        "category": "Foundation",
+        "icon": "$(comment-discussion)"
+      },
+      {
+        "command": "foundation.startRunningProject",
+        "title": "Start Running Project",
+        "category": "Foundation",
+        "icon": "$(play)"
+      },
+      {
+        "command": "foundation.connectRunningProject",
+        "title": "Connect Running Project",
+        "category": "Foundation",
+        "icon": "$(plug)"
+      },
+      {
+        "command": "foundation.stopRunningProject",
+        "title": "Stop Running Project",
+        "category": "Foundation",
+        "icon": "$(debug-stop)"
+      },
+      {
+        "command": "foundation.runtimeSetup",
+        "title": "Show Running Project Setup",
+        "category": "Foundation",
+        "icon": "$(tools)"
+      },
+      {
+        "command": "foundation.newFeature",
+        "title": "New Feature",
+        "category": "Foundation"
+      },
+      {
+        "command": "foundation.selectFeature",
+        "title": "Select Feature",
+        "category": "Foundation"
+      },
+      {
+        "command": "foundation.prepareFeatureContext",
+        "title": "Use Feature in Assistant",
+        "category": "Foundation"
+      },
+      {
+        "command": "foundation.openFeatureEntry",
+        "title": "Open Feature Primary File",
+        "category": "Foundation"
+      },
+      {
+        "command": "foundation.openFeatureScreen",
+        "title": "Open Feature Screen",
+        "category": "Foundation"
+      },
+      {
+        "command": "foundation.observeFeatureScenario",
+        "title": "Observe Feature Scenario",
+        "category": "Foundation"
+      },
+      {
+        "command": "foundation.editSelection",
+        "title": "Edit Selection with AI",
+        "category": "Foundation",
+        "icon": "$(sparkle)",
+        "enablement": "editorHasSelection && resourceScheme == file && isWorkspaceTrusted"
+      },
+      {
+        "command": "foundation.acceptInlineEdit",
+        "title": "Accept Selection Edit",
+        "category": "Foundation",
+        "icon": "$(check)",
+        "enablement": "foundation.inlineEditReady"
+      },
+      {
+        "command": "foundation.reviewInlineEdit",
+        "title": "Review Selection Edit",
+        "category": "Foundation",
+        "icon": "$(diff)",
+        "enablement": "foundation.inlineEditReady"
+      },
+      {
+        "command": "foundation.dismissInlineEdit",
+        "title": "Dismiss Selection Edit",
+        "category": "Foundation",
+        "icon": "$(close)",
+        "enablement": "foundation.inlineEditActive"
+      },
+      {
+        "command": "foundation.cancelInlineEdit",
+        "title": "Cancel Selection Edit",
+        "category": "Foundation",
+        "icon": "$(debug-stop)",
+        "enablement": "foundation.inlineEditActive"
+      },
+      {
+        "command": "foundation.startCodeSuggestions",
+        "title": "Start Code Suggestions",
+        "category": "Foundation",
+        "icon": "$(sparkle)",
+        "enablement": "isWorkspaceTrusted && resourceScheme == file"
+      },
+      {
+        "command": "foundation.stopCodeSuggestions",
+        "title": "Pause Code Suggestions",
+        "category": "Foundation",
+        "icon": "$(debug-pause)"
+      },
+      {
+        "command": "foundation.requestCodeSuggestion",
+        "title": "Request Code Suggestion",
+        "category": "Foundation",
+        "icon": "$(sparkle)",
+        "enablement": "editorHasSelection == false && resourceScheme == file && isWorkspaceTrusted"
+      },
+      {
+        "command": "foundation.reviewNextEdit",
+        "title": "Review Next Edit",
+        "category": "Foundation",
+        "icon": "$(diff)"
+      },
+      {
+        "command": "foundation.dismissNextEdit",
+        "title": "Dismiss Next Edit",
+        "category": "Foundation",
+        "icon": "$(close)"
+      },
+      {
+        "command": "foundation.stopSwiftLanguage",
+        "title": "Foundation: Disconnect Swift"
+      }
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "foundation",
+          "title": "Foundation",
+          "icon": "media/logo.svg"
+        }
+      ],
+      "secondarySidebar": [
+        {
+          "id": "foundation-assistant",
+          "title": "Assistant",
+          "icon": "media/logo.svg"
+        }
+      ]
+    },
+    "views": {
+      "foundation": [
+        {
+          "id": "foundation.context",
+          "name": "Source context"
+        }
+      ],
+      "foundation-assistant": [
+        {
+          "id": "foundation.assistant",
+          "name": "Assistant",
+          "type": "webview"
+        }
+      ]
+    },
+    "viewsWelcome": [
+      {
+        "view": "foundation.context",
+        "contents": "Open a folder to explore its source.\n[Open Folder](command:foundation.openProject)",
+        "when": "!workspaceFolderCount"
+      }
+    ],
+    "menus": {
+      "view/title": [
+        {
+          "command": "foundation.refresh",
+          "when": "view == foundation.context",
+          "group": "navigation"
+        },
+        {
+          "command": "foundation.askAI",
+          "when": "view == foundation.context",
+          "group": "navigation"
+        }
+      ],
+      "editor/context": [
+        {
+          "command": "foundation.editSelection",
+          "when": "editorHasSelection && resourceScheme == file && isWorkspaceTrusted",
+          "group": "foundation@0"
+        },
+        {
+          "command": "foundation.understand",
+          "group": "foundation@1"
+        },
+        {
+          "command": "foundation.askAI",
+          "group": "foundation@2"
+        }
+      ],
+      "editor/title": [
+        {
+          "command": "foundation.acceptInlineEdit",
+          "when": "resourceScheme == foundation-inline && foundation.inlineEditReady",
+          "group": "navigation@0"
+        },
+        {
+          "command": "foundation.dismissInlineEdit",
+          "when": "resourceScheme == foundation-inline && foundation.inlineEditReady",
+          "group": "navigation@1"
+        }
+      ]
+    },
+    "keybindings": [
+      {
+        "command": "foundation.understand",
+        "key": "ctrl+alt+1",
+        "mac": "cmd+alt+1"
+      },
+      {
+        "command": "foundation.toggleAssistant",
+        "key": "ctrl+alt+a",
+        "mac": "cmd+alt+a"
+      },
+      {
+        "command": "foundation.editSelection",
+        "key": "ctrl+alt+e",
+        "mac": "cmd+alt+e",
+        "when": "editorTextFocus && editorHasSelection && resourceScheme == file && isWorkspaceTrusted"
+      },
+      {
+        "command": "foundation.acceptInlineEdit",
+        "key": "ctrl+alt+enter",
+        "mac": "cmd+alt+enter",
+        "when": "editorTextFocus && resourceScheme == foundation-inline && foundation.inlineEditReady"
+      },
+      {
+        "command": "foundation.dismissInlineEdit",
+        "key": "escape",
+        "when": "editorTextFocus && resourceScheme == foundation-inline && foundation.inlineEditActive && !findWidgetVisible && !suggestWidgetVisible"
+      },
+      {
+        "command": "foundation.reviewNextEdit",
+        "key": "ctrl+alt+n",
+        "mac": "cmd+alt+n",
+        "when": "editorTextFocus && resourceScheme == file && foundation.nextEditReady"
+      }
+    ],
+    "configuration": {
+      "title": "Foundation",
+      "properties": {
+        "foundation.ai.baseUrl": {
+          "type": "string",
+          "default": "",
+          "scope": "application",
+          "description": "Legacy OpenAI-compatible API base URL. New providers use Set Up AI and separate profiles."
+        },
+        "foundation.ai.model": {
+          "type": "string",
+          "default": "",
+          "scope": "application",
+          "description": "Model ID from your AI provider. Applies to this computer."
+        },
+        "foundation.openOnStartup": {
+          "type": "boolean",
+          "default": true,
+          "scope": "application",
+          "description": "Open Foundation on the first visit to a workspace. Later launches restore its existing native tabs; a workspace you closed stays closed."
+        },
+        "foundation.ai.providerKind": {
+          "type": "string",
+          "enum": [
+            "compatible",
+            "openai",
+            "anthropic"
+          ],
+          "default": "compatible",
+          "scope": "application",
+          "description": "Active API provider. Use Set Up AI to configure a provider and its separate credential."
+        },
+        "foundation.ai.profiles": {
+          "type": "object",
+          "default": {},
+          "scope": "application",
+          "additionalProperties": {
+            "type": "object",
+            "properties": {
+              "baseUrl": {
+                "type": "string"
+              },
+              "model": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          },
+          "description": "Provider model and destination profiles. Keys are stored separately in native credential storage; never put API keys here."
+        }
+      }
+    },
+    "themes": [
+      {
+        "label": "Foundation Dark",
+        "uiTheme": "vs-dark",
+        "path": "themes/foundation-dark.json"
+      },
+      {
+        "label": "Foundation Light",
+        "uiTheme": "vs",
+        "path": "themes/foundation-light.json"
+      }
+    ],
+    "configurationDefaults": {
+      "workbench.colorTheme": "Foundation Dark",
+      "workbench.preferredDarkColorTheme": "Foundation Dark",
+      "workbench.preferredLightColorTheme": "Foundation Light",
+      "workbench.startupEditor": "none",
+      "chat.disableAIFeatures": true,
+      "workbench.sideBar.location": "left"
+    }
+  },
+  "private": true
+}

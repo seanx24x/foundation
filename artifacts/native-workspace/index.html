@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; font-src 'self'; frame-src 'self'; connect-src 'self'; img-src 'self' data:; form-action 'none'; base-uri 'none'">
+  <title>Foundation · Native workspace reference</title>
+  <link rel="stylesheet" href="./harness.css"><script defer src="./harness.js"></script>
+</head>
+<body>
+  <header class="fixture-bar">
+    <a class="fixture-brand" href="./README.md" title="Read fixture boundaries">Foundation <span>0.6</span></a>
+    <p class="fixture-boundary">Fixture · no provider or source writes</p>
+    <div class="fixture-tools">
+      <select id="fixture-file" aria-label="Select saved fixture source"></select>
+      <button id="fixture-stale" type="button" title="Simulate a newer saved revision in fixture memory">Source changed</button>
+      <select id="fixture-theme" aria-label="Workbench theme"><option value="dark">Dark</option><option value="light">Light</option></select>
+      <button id="fixture-reset" type="button">Reset</button>
+    </div>
+  </header>
+  <main><iframe id="native-webview" title="Foundation native workspace renderer · isolated fixture host"></iframe></main>
+  <div id="fixture-status" class="fixture-status" role="status" aria-live="polite" hidden></div>
+  <dialog id="fixture-source" aria-labelledby="source-title">
+    <header><div><p>Read-only fixture snapshot</p><h1 id="source-title"></h1></div><button id="source-close" type="button">Close</button></header>
+    <p id="source-note">Source navigation selects the corresponding fixture file. This browser has no native editor or filesystem connection.</p>
+    <pre><code id="source-code"></code></pre>
+  </dialog>
+</body>
+</html>

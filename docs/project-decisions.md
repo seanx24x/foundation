@@ -1,0 +1,13 @@
+# Project Decisions
+
+Foundation 0.41 preserves a user-authored reason for an explicitly applied, retained comparison alternative. Record decision is a separate action after Review and Apply. It never runs code or changes source.
+
+A decision freezes the chosen alternative, affected source hashes, contributing saved files, feature/screen/scenario definitions, comparison conditions, adoption checkpoint, and independent observation/replay/capture identities. The rationale is immutable. A later decision may explicitly supersede an earlier decision for the same feature; both remain available.
+
+Current source, adoption state, evidence availability and supersession are separate facts. Undo retains the decision and shows Not applied. Changed or missing saved source, changed feature/screen/scenario definitions, unavailable evidence, and supersession prevent Assistant sharing. Unrelated history revision changes do not invalidate unchanged definitions. Unsaved contributing files are excluded and block sharing until resolved. Captures belong to isolated copies before adoption; they do not claim verification of the adopted original project.
+
+Decisions are available from Review, their feature, and linked source. View retained comparison opens the exact historical comparison without running it or automatically loading images. A missing retained adoption checkpoint is shown as unavailable; the decision itself remains readable. Local history restores without starting runtimes, loading images or dispatching a provider request. Storage retry saves the same record without repeating Apply or runtime actions. The bounded append-only journal holds 32 decisions and at most 2 MiB; a full journal refuses new entries without deleting history.
+
+Assistant context starts unselected. Up to four decisions and 16 KiB may be explicitly included with ordinary Ask, Plan, Build or Review requests. The host resolves selected identities from its own journal, rechecks saved source and checkpoint ownership, and retains the exact disclosed snapshot with the turn. Historical rationale is reference material, never tool authority or fresh runtime evidence. Specialized investigation and revision handoffs retain their existing bounded context.
+
+Acceptance: compare → review → apply → record why → restart → recover rationale and evidence. Verify exact explicit Assistant disclosure, stale and unavailable handling, Undo history, supersession, and preservation of unrelated source and unsaved drafts. The complete native workflow and installed Orbit preservation passed. See [0.41 verification](../artifacts/verification-v0.41.md) for the exact evidence and remaining boundaries.

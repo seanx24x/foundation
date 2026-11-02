@@ -1,0 +1,67 @@
+Foundation Source Inspection License 1.0
+
+Copyright (c) 2026 the respective Foundation copyright holders.
+All rights reserved except as expressly granted below.
+
+1. Scope and authority
+
+This license applies only to Foundation-original source code, documentation,
+designs and other material whose rights holders have made it available under
+this license (the "Material"). Each licensor grants only rights that licensor
+owns or is authorized to grant. This license does not establish ownership,
+assign copyright, or apply to material governed by a separate license.
+
+2. Limited permission for inspection
+
+You may access, download, make verbatim copies of, read and analyze the Material
+solely to inspect it. Inspection may include technical review, security review,
+and business due diligence. Retain this license and applicable copyright and
+attribution notices in any permitted copy.
+
+When the Material is published on a hosting service, you may also exercise the
+viewing, copying and forking rights expressly granted by that service's
+applicable terms. This license does not reduce those rights.
+
+3. Rights not granted
+
+Except for the inspection and hosting-service permissions above, this license
+does not grant permission to compile, execute, operate, modify, adapt,
+sublicense, redistribute, sell, or create derivative works of the Material,
+or incorporate it into another product or service. In particular, no right
+to use the Material to supply a competing product or service is granted.
+Additional uses require separate written permission from the applicable
+rights holder. This is a source-inspection license, not an end-user license
+for a distributed Foundation application.
+
+No patent or trademark license is granted. The name Foundation is a project
+identifier in this document; it is not a representation of an incorporated
+legal entity or of trademark registration.
+
+4. Third-party and separately licensed material
+
+Third-party and separately licensed material remains governed by its own
+licenses, including any broader permissions and obligations. Those licenses
+control for their respective material. See THIRD_PARTY_NOTICES.md in the
+Foundation source repository, the notices accompanying individual files and
+assets, and the notices included with the relevant distribution.
+
+Code OSS, declared MIT-licensed host patches, dependency code, fonts and icons
+are not relicensed by this document. Nothing here revokes or restricts any
+license validly granted previously, a separate written agreement, applicable
+hosting-service rights, or rights that cannot be restricted under applicable
+law. Public disclosure does not make source code a trade secret.
+
+5. Warranty and liability
+
+TO THE EXTENT PERMITTED BY APPLICABLE LAW, THE MATERIAL IS PROVIDED "AS IS",
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT.
+TO THE EXTENT PERMITTED BY APPLICABLE LAW, THE LICENSORS ARE NOT LIABLE FOR
+CLAIMS, DAMAGES OR OTHER LIABILITY ARISING FROM THE MATERIAL OR ITS USE.
+
+6. Additional permissions
+
+Contact the repository owner to request a separate evaluation, commercial,
+contribution or distribution agreement. Receiving source access or submitting
+a contribution does not itself transfer ownership or grant Foundation rights
+to relicense another person's contribution.

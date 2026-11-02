@@ -1,0 +1,581 @@
+{
+  "version": "1.3.0",
+  "status": "Design contract; not yet applied to the desktop app",
+  "date": "2026-10-27",
+  "unit": "logical CSS px; native macOS dimensions in points",
+  "grid": 4,
+  "space": [
+    0,
+    4,
+    8,
+    12,
+    16,
+    20,
+    24,
+    32,
+    40,
+    48,
+    64,
+    80,
+    96
+  ],
+  "radius": {
+    "flush": 0,
+    "small": 4,
+    "control": 8,
+    "overlay": 12,
+    "stage": 16
+  },
+  "font": {
+    "ui": "Geist",
+    "code": "Geist Mono",
+    "fallbackUI": "-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif",
+    "fallbackCode": "SFMono-Regular, Consolas, monospace",
+    "weights": [
+      400,
+      500,
+      600
+    ]
+  },
+  "density": {
+    "standard": {
+      "row": 32,
+      "control": 32,
+      "sectionHeader": 32,
+      "treeIndent": 16,
+      "itemGap": 8
+    },
+    "compact": {
+      "row": 28,
+      "control": 28,
+      "sectionHeader": 28,
+      "treeIndent": 16,
+      "itemGap": 4
+    },
+    "coarse": {
+      "row": 44,
+      "control": 44,
+      "sectionHeader": 32,
+      "treeIndent": 16,
+      "itemGap": 8
+    }
+  },
+  "layout": {
+    "window": {
+      "defaultWidth": 1440,
+      "defaultHeight": 960,
+      "fullMinimumWidth": 1024,
+      "fullMinimumHeight": 640,
+      "narrowFallbackWidth": 800,
+      "narrowFallbackHeight": 600
+    },
+    "titlebar": 48,
+    "workflowbar": 0,
+    "tabbar": 40,
+    "statusbar": 24,
+    "rail": 48,
+    "navigator": {
+      "default": 240,
+      "min": 192,
+      "max": 360
+    },
+    "inspector": {
+      "default": 320,
+      "min": 280,
+      "max": 480
+    },
+    "assistant": {
+      "default": 384,
+      "min": 320,
+      "max": 560
+    },
+    "center": {
+      "min": 480,
+      "splitPaneMin": 384
+    },
+    "bottom": {
+      "default": 240,
+      "min": 160,
+      "max": 480,
+      "remainingMainMin": 320
+    },
+    "resizeHitArea": 8,
+    "resizeStep": 4,
+    "resizeLargeStep": 16,
+    "dialog": {
+      "small": 400,
+      "default": 560,
+      "large": 720
+    },
+    "commandPalette": 640,
+    "tooltipMax": 320
+  },
+  "motion": {
+    "immediate": 0,
+    "hover": 80,
+    "disclosure": 120,
+    "panel": 160,
+    "workspace": 220,
+    "easing": "cubic-bezier(0.2, 0, 0, 1)",
+    "reducedMotion": 0
+  },
+  "gridExceptions": [
+    "1px separator and icon stroke geometry",
+    "2px focus stroke and 2px offset",
+    "optical font size, tracking, glyph and baseline metrics",
+    "native OS window frame/traffic lights",
+    "user editor configuration and existing panel state",
+    "0-3px flexible-center remainder at arbitrary host sizes",
+    "continuous pointer/zoom coordinates before snap",
+    "external product geometry, runtime measurements, third-party extensions"
+  ],
+  "color": {
+    "light": {
+      "surface.workspace": "#F5F5F7",
+      "surface.navigation": "#EEEEF1",
+      "surface.panel": "#FAFAFB",
+      "surface.editor": "#FFFFFF",
+      "surface.raised": "#FFFFFF",
+      "surface.hover": "#E9E9ED",
+      "surface.pressed": "#DCDCE2",
+      "border.subtle": "#DFDFE5",
+      "border.control": "#82828E",
+      "text.primary": "#202024",
+      "text.secondary": "#55555F",
+      "text.muted": "#595965",
+      "text.disabled": "#808A99",
+      "accent.text": "#2449B7",
+      "accent.surface": "#E8EEFF",
+      "accent.fill": "#315BD6",
+      "accent.onFill": "#FFFFFF",
+      "focus.ring": "#315BD6",
+      "action.fill": "#242428",
+      "action.hover": "#3A3A42",
+      "action.onFill": "#FFFFFF",
+      "status.success.text": "#176340",
+      "status.success.surface": "#E5F5EC",
+      "status.warning.text": "#805211",
+      "status.warning.surface": "#FFF1D5",
+      "status.error.text": "#B0293D",
+      "status.error.surface": "#FDECEF",
+      "status.info.text": "#2449B7",
+      "status.info.surface": "#EDF2FF",
+      "evidence.ai.text": "#6D47B8",
+      "evidence.ai.surface": "#F2ECFF",
+      "syntax.keyword": "#7445A8",
+      "syntax.string": "#216744",
+      "syntax.function": "#2459B6",
+      "syntax.number": "#9B4E18",
+      "syntax.comment": "#626D7E",
+      "diff.add.surface": "#ECF8F0",
+      "diff.remove.surface": "#FDEEEF",
+      "diff.change.surface": "#EDF2FF"
+    },
+    "dark": {
+      "surface.workspace": "#111112",
+      "surface.navigation": "#171719",
+      "surface.panel": "#1E1E21",
+      "surface.editor": "#202023",
+      "surface.raised": "#28282C",
+      "surface.hover": "#303034",
+      "surface.pressed": "#3B3B41",
+      "border.subtle": "#36363C",
+      "border.control": "#8B8B96",
+      "text.primary": "#F2F2F4",
+      "text.secondary": "#C2C2CB",
+      "text.muted": "#ACACB8",
+      "text.disabled": "#7F7F88",
+      "accent.text": "#AEC3FF",
+      "accent.surface": "#27365E",
+      "accent.fill": "#9AB7FF",
+      "accent.onFill": "#111A30",
+      "focus.ring": "#9AB7FF",
+      "action.fill": "#F0F0F4",
+      "action.hover": "#DADAE1",
+      "action.onFill": "#171719",
+      "status.success.text": "#90DBAE",
+      "status.success.surface": "#173C2A",
+      "status.warning.text": "#EDC67A",
+      "status.warning.surface": "#3D3018",
+      "status.error.text": "#FFACB7",
+      "status.error.surface": "#44232D",
+      "status.info.text": "#9AB7FF",
+      "status.info.surface": "#233454",
+      "evidence.ai.text": "#C7AFF2",
+      "evidence.ai.surface": "#342746",
+      "syntax.keyword": "#CAA7EF",
+      "syntax.string": "#9DD6B6",
+      "syntax.function": "#A0C2FF",
+      "syntax.number": "#E7BC82",
+      "syntax.comment": "#9DA7B8",
+      "diff.add.surface": "#18372A",
+      "diff.remove.surface": "#40252C",
+      "diff.change.surface": "#233454"
+    }
+  },
+  "contrastPairs": [
+    {
+      "foreground": "text.primary",
+      "background": "surface.workspace",
+      "minimum": 4.5
+    },
+    {
+      "foreground": "text.primary",
+      "background": "surface.navigation",
+      "minimum": 4.5
+    },
+    {
+      "foreground": "text.primary",
+      "background": "surface.panel",
+      "minimum": 4.5
+    },
+    {
+      "foreground": "text.primary",
+      "background": "surface.editor",
+      "minimum": 4.5
+    },
+    {
+      "foreground": "text.primary",
+      "background": "surface.raised",
+      "minimum": 4.5
+    },
+    {
+      "foreground": "text.primary",
+      "background": "surface.hover",
+      "minimum": 4.5
+    },
+    {
+      "foreground": "text.primary",
+      "background": "surface.pressed",
+      "minimum": 4.5
+    },
+    {
+      "foreground": "text.primary",
+      "background": "accent.surface",
+      "minimum": 4.5
+    },
+    {
+      "foreground": "text.primary",
+      "background": "diff.add.surface",
+      "minimum": 4.5
+    },
+    {
+      "foreground": "text.primary",
+      "background": "diff.remove.surface",
+      "minimum": 4.5
+    },
+    {
+      "foreground": "text.primary",
+      "background": "diff.change.surface",
+      "minimum": 4.5
+    },
+    {
+      "foreground": "text.secondary",
+      "background": "surface.workspace",
+      "minimum": 4.5
+    },
+    {
+      "foreground": "text.secondary",
+      "background": "surface.navigation",
+      "minimum": 4.5
+    },
+    {
+      "foreground": "text.secondary",
+      "background": "surface.panel",
+      "minimum": 4.5
+    },
+    {
+      "foreground": "text.secondary",
+      "background": "surface.editor",
+      "minimum": 4.5
+    },
+    {
+      "foreground": "text.secondary",
+      "background": "surface.raised",
+      "minimum": 4.5
+    },
+    {
+      "foreground": "text.secondary",
+      "background": "surface.hover",
+      "minimum": 4.5
+    },
+    {
+      "foreground": "text.secondary",
+      "background": "surface.pressed",
+      "minimum": 4.5
+    },
+    {
+      "foreground": "text.secondary",
+      "background": "accent.surface",
+      "minimum": 4.5
+    },
+    {
+      "foreground": "text.secondary",
+      "background": "diff.add.surface",
+      "minimum": 4.5
+    },
+    {
+      "foreground": "text.secondary",
+      "background": "diff.remove.surface",
+      "minimum": 4.5
+    },
+    {
+      "foreground": "text.secondary",
+      "background": "diff.change.surface",
+      "minimum": 4.5
+    },
+    {
+      "foreground": "text.muted",
+      "background": "surface.workspace",
+      "minimum": 4.5
+    },
+    {
+      "foreground": "text.muted",
+      "background": "surface.navigation",
+      "minimum": 4.5
+    },
+    {
+      "foreground": "text.muted",
+      "background": "surface.panel",
+      "minimum": 4.5
+    },
+    {
+      "foreground": "text.muted",
+      "background": "surface.editor",
+      "minimum": 4.5
+    },
+    {
+      "foreground": "text.muted",
+      "background": "surface.raised",
+      "minimum": 4.5
+    },
+    {
+      "foreground": "text.muted",
+      "background": "surface.hover",
+      "minimum": 4.5
+    },
+    {
+      "foreground": "text.muted",
+      "background": "surface.pressed",
+      "minimum": 4.5
+    },
+    {
+      "foreground": "text.muted",
+      "background": "accent.surface",
+      "minimum": 4.5
+    },
+    {
+      "foreground": "text.muted",
+      "background": "diff.add.surface",
+      "minimum": 4.5
+    },
+    {
+      "foreground": "text.muted",
+      "background": "diff.remove.surface",
+      "minimum": 4.5
+    },
+    {
+      "foreground": "text.muted",
+      "background": "diff.change.surface",
+      "minimum": 4.5
+    },
+    {
+      "foreground": "accent.text",
+      "background": "accent.surface",
+      "minimum": 4.5
+    },
+    {
+      "foreground": "accent.onFill",
+      "background": "accent.fill",
+      "minimum": 4.5
+    },
+    {
+      "foreground": "action.onFill",
+      "background": "action.fill",
+      "minimum": 4.5
+    },
+    {
+      "foreground": "action.onFill",
+      "background": "action.hover",
+      "minimum": 4.5
+    },
+    {
+      "foreground": "status.success.text",
+      "background": "status.success.surface",
+      "minimum": 4.5
+    },
+    {
+      "foreground": "status.warning.text",
+      "background": "status.warning.surface",
+      "minimum": 4.5
+    },
+    {
+      "foreground": "status.error.text",
+      "background": "status.error.surface",
+      "minimum": 4.5
+    },
+    {
+      "foreground": "status.info.text",
+      "background": "status.info.surface",
+      "minimum": 4.5
+    },
+    {
+      "foreground": "evidence.ai.text",
+      "background": "evidence.ai.surface",
+      "minimum": 4.5
+    },
+    {
+      "foreground": "syntax.keyword",
+      "background": "surface.editor",
+      "minimum": 4.5
+    },
+    {
+      "foreground": "syntax.string",
+      "background": "surface.editor",
+      "minimum": 4.5
+    },
+    {
+      "foreground": "syntax.function",
+      "background": "surface.editor",
+      "minimum": 4.5
+    },
+    {
+      "foreground": "syntax.number",
+      "background": "surface.editor",
+      "minimum": 4.5
+    },
+    {
+      "foreground": "syntax.comment",
+      "background": "surface.editor",
+      "minimum": 4.5
+    },
+    {
+      "foreground": "border.control",
+      "background": "surface.editor",
+      "minimum": 3
+    },
+    {
+      "foreground": "border.control",
+      "background": "surface.panel",
+      "minimum": 3
+    },
+    {
+      "foreground": "border.control",
+      "background": "surface.raised",
+      "minimum": 3
+    },
+    {
+      "foreground": "border.control",
+      "background": "surface.hover",
+      "minimum": 3
+    },
+    {
+      "foreground": "border.control",
+      "background": "surface.navigation",
+      "minimum": 3
+    },
+    {
+      "foreground": "focus.ring",
+      "background": "surface.editor",
+      "minimum": 3
+    },
+    {
+      "foreground": "focus.ring",
+      "background": "surface.panel",
+      "minimum": 3
+    },
+    {
+      "foreground": "focus.ring",
+      "background": "surface.raised",
+      "minimum": 3
+    },
+    {
+      "foreground": "focus.ring",
+      "background": "surface.hover",
+      "minimum": 3
+    },
+    {
+      "foreground": "focus.ring",
+      "background": "surface.navigation",
+      "minimum": 3
+    }
+  ],
+  "typography": {
+    "caption": {
+      "size": 12,
+      "line": 16,
+      "weight": 400
+    },
+    "label": {
+      "size": 12,
+      "line": 16,
+      "weight": 500
+    },
+    "ui": {
+      "size": 13,
+      "line": 20,
+      "weight": 400
+    },
+    "uiStrong": {
+      "size": 13,
+      "line": 20,
+      "weight": 500
+    },
+    "body": {
+      "size": 14,
+      "line": 20,
+      "weight": 400
+    },
+    "section": {
+      "size": 16,
+      "line": 24,
+      "weight": 600
+    },
+    "title": {
+      "size": 20,
+      "line": 28,
+      "weight": 600
+    },
+    "display": {
+      "size": 24,
+      "line": 32,
+      "weight": 600
+    },
+    "code": {
+      "size": 13,
+      "line": 20,
+      "weight": 400
+    }
+  },
+  "stroke": {
+    "divider": 1,
+    "focus": 2,
+    "focusOffset": 2,
+    "iconDense": 1.5,
+    "iconLarge": 2
+  },
+  "icon": {
+    "small": 16,
+    "toolbar": 20,
+    "large": 24,
+    "sourceViewBox": 24
+  },
+  "shadow": {
+    "menu": {
+      "x": 0,
+      "y": 8,
+      "blur": 24,
+      "spread": 0,
+      "lightOpacity": 0.12,
+      "darkOpacity": 0.24
+    },
+    "dialog": {
+      "x": 0,
+      "y": 16,
+      "blur": 48,
+      "spread": 0,
+      "lightOpacity": 0.18,
+      "darkOpacity": 0.32
+    }
+  }
+}

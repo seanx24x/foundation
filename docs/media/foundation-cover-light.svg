@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="576" viewBox="0 0 1600 576" fill="none" role="img" aria-labelledby="title desc">
+<title id="title">Foundation</title><desc id="desc">Understand how it works. Shape how it feels. Four connected activities: Understand, Build, Refine, Review. Original brand illustration, not an application screenshot.</desc>
+<defs><linearGradient id="field" x1="0" y1="576" x2="1600" y2="0" gradientUnits="userSpaceOnUse"><stop stop-color="#F7F8FA"/><stop offset="1" stop-color="#ECEFF8"/></linearGradient></defs>
+<rect width="1600" height="576" rx="24" fill="url(#field)"/>
+<rect x="0.5" y="0.5" width="1599" height="575" rx="23.5" stroke="#DCE0E7"/>
+<g font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif">
+<text x="88" y="88" fill="#646B78" font-size="18" font-weight="500" letter-spacing="3">A CONNECTED DEVELOPMENT ENVIRONMENT</text>
+<text x="80" y="236" fill="#171A20" font-size="112" font-weight="600" letter-spacing="-5">Foundation</text>
+<text x="88" y="307" fill="#646B78" font-size="32" font-weight="400" letter-spacing="-0.5">Understand how it works.</text>
+<text x="88" y="353" fill="#646B78" font-size="32" font-weight="400" letter-spacing="-0.5">Shape how it feels.</text>
+<path d="M88 441H1512" stroke="#DCE0E7"/>
+<text x="88" y="498" fill="#5269C7" font-size="16" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">01</text><text x="133" y="500" fill="#171A20" font-size="24" font-weight="500">Understand</text>
+<text x="456" y="498" fill="#5269C7" font-size="16" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">02</text><text x="501" y="500" fill="#171A20" font-size="24" font-weight="500">Build</text>
+<text x="824" y="498" fill="#5269C7" font-size="16" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">03</text><text x="869" y="500" fill="#171A20" font-size="24" font-weight="500">Refine</text>
+<text x="1192" y="498" fill="#5269C7" font-size="16" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">04</text><text x="1237" y="500" fill="#171A20" font-size="24" font-weight="500">Review</text>
+</g>
+<g transform="translate(1144 132)">
+<path d="M-40-32H320M-40 312H320M-40-32V312M320-32V312" stroke="#E3E7EF"/>
+<path d="M-48-32H-32M-40-40V-24M312-32H328M320-40V-24M-48 312H-32M-40 304V320M312 312H328M320 304V320" stroke="#646B78" stroke-opacity="0.35"/>
+<rect x="0" y="0" width="68" height="280" rx="8" fill="#171A20"/>
+<rect x="0" y="0" width="280" height="68" rx="8" fill="#171A20"/>
+<rect x="88" y="108" width="152" height="60" rx="8" fill="#5269C7"/>
+<path d="M88 200H280M88 240H224M88 280H168" stroke="#DCE0E7" stroke-width="2"/>
+</g>
+</svg>

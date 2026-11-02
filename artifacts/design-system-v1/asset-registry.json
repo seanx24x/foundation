@@ -1,0 +1,83 @@
+{
+  "scope": "Design reference assets, not the complete desktop dependency inventory",
+  "assets": [
+    {
+      "asset": "assets/geist.woff2",
+      "source": "https://github.com/vercel/geist-font/blob/1d6dfdb6e58c0ddd841c1e24e59aef01ec3916e4/fonts/Geist/webfonts/Geist[wght].woff2",
+      "version": "1.8.2",
+      "commit": "1d6dfdb6e58c0ddd841c1e24e59aef01ec3916e4",
+      "sha256": "2ffebe993e969069a9789d15164b7715d42491b5835516c5e3b935d5f81b05f1",
+      "license": "OFL-1.1",
+      "notices": [
+        "assets/geist-LICENSE.txt",
+        "assets/geist-OFL.txt"
+      ],
+      "modifications": "Unmodified upstream font binary",
+      "use": "Offline design reference only; production adoption specified separately"
+    },
+    {
+      "asset": "assets/geist-mono.woff2",
+      "source": "https://github.com/vercel/geist-font/blob/1d6dfdb6e58c0ddd841c1e24e59aef01ec3916e4/fonts/GeistMono/webfonts/GeistMono[wght].woff2",
+      "version": "1.8.2",
+      "commit": "1d6dfdb6e58c0ddd841c1e24e59aef01ec3916e4",
+      "sha256": "afaacc4c5fbba89d2ebf7a02dc4070208540874592a5504d57175782fe893101",
+      "license": "OFL-1.1",
+      "notices": [
+        "assets/geist-LICENSE.txt",
+        "assets/geist-OFL.txt"
+      ],
+      "modifications": "Unmodified upstream font binary",
+      "use": "Offline design reference only; production adoption specified separately"
+    },
+    {
+      "asset": "specimen.js (ICONS collection)",
+      "source": "https://github.com/lucide-icons/lucide/tree/0.576.0",
+      "version": "0.576.0",
+      "sha256": "c073d8d71d9b7ac7acc8a389290a5b20320ae802c156b90e7e677f0d4334885c",
+      "license": "ISC AND MIT (Feather portions)",
+      "notices": [
+        "assets/lucide-LICENSE.txt"
+      ],
+      "modifications": "Selected original icon nodes retained; local renderer specifies size and optical strokes. File also contains Foundation-authored specimen logic.",
+      "icons": [
+        "Accessibility",
+        "ArrowRight",
+        "ArrowUpRight",
+        "Bot",
+        "Braces",
+        "Check",
+        "CheckCheck",
+        "ChevronDown",
+        "ChevronRight",
+        "CircleDot",
+        "CircleHelp",
+        "Code2",
+        "Eye",
+        "FileCode2",
+        "Folder",
+        "GitBranch",
+        "Grid2X2",
+        "History",
+        "Layers",
+        "Link2",
+        "Minus",
+        "Moon",
+        "MousePointer2",
+        "Network",
+        "PanelRight",
+        "PanelsTopLeft",
+        "RotateCcw",
+        "Scan",
+        "Search",
+        "Settings",
+        "ShieldCheck",
+        "SlidersHorizontal",
+        "Sparkles",
+        "Sun",
+        "Terminal",
+        "TriangleAlert",
+        "X"
+      ]
+    }
+  ]
+}

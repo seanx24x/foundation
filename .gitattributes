@@ -1,0 +1,5 @@
+# Preserve supplied upstream font notices byte-for-byte.
+**/geist-OFL.txt -whitespace
+
+# Unmodified upstream notices retain their supplied whitespace.
+/licenses/** -whitespace

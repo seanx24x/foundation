@@ -1,0 +1,6 @@
+import type {ReproducibleIssue,ReproducibleIssueInput} from '../../../server/project/reproducible-issues.mjs';
+export {REPRODUCIBLE_ISSUE_LIMITS,normalizeReproducibleIssue,reproducibleIssueDigest} from '../../../server/project/reproducible-issues.mjs';
+export interface ReproducibleIssuesManifest {schemaVersion:1;projectId:string;revision:number;issues:ReproducibleIssue[]}
+export interface ReproducibleIssuesSnapshot extends ReproducibleIssuesManifest {storage:{status:'saved'|'saving'|'error'|'unavailable';message?:string}}
+export interface ReproducibleIssuesStore {snapshot():ReproducibleIssuesSnapshot;/** Shared frozen committed projection; repeated reads do not clone full evidence. */presentation():{snapshot:ReproducibleIssuesSnapshot;epoch:number};load():Promise<ReproducibleIssuesSnapshot>;create(input:ReproducibleIssueInput,expectedRevision:number,options?:{isCurrent?:()=>boolean}):Promise<ReproducibleIssue>;retry():Promise<ReproducibleIssuesSnapshot>;dispose():Promise<void>}
+export function createReproducibleIssuesStore(options:{projectId:string;read:()=>unknown;write:(manifest:ReproducibleIssuesManifest)=>PromiseLike<unknown>|unknown;onChange?:()=>void}):ReproducibleIssuesStore;
